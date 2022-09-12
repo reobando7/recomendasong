@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row" *ngIf="!playYoutube">
+        <div class="col-md-12">
+            <h1 class="text-center mt-4 mb-4 fw-600">
+                <img [src]="arrowLeft" (click)="close()" class="mr-2 cursor-pointer" alt="arrow_left"><span>Canci</span><img [src]="disk" class="w-2 rotate"alt="disk"><span>n recomendada</span>
+            </h1>
+            <br>
+            <img [src]="song.img" class="img-fluid imgPotrait" alt="songImage">
+            <br>
+            <div class="description mt-2">
+                <h2>
+                    <strong>
+                        {{song.name}} ({{song.year}})
+                    </strong>
+                </h2>
+                <h4>{{song.artist.artist}}</h4>
+                <h5>{{song.duration}}</h5>
+
+                <button class="btn btn-dark db-ma" title="Reproducir desde YouTube" (click)="playYoutube=true">
+                    <img [src]="youtube" class="youtube" alt="youtube">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="playYoutube">
+        <div class="col-md-12">
+            <br>
+            <br>
+            <div class="d-flex justify-content-center">
+                <iframe width="700" height="500"
+                [src]="urlVideo" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-light db-ma" (click)="playYoutube=!playYoutube">
+                Cerrar
+            </button>
+        </div>
+    </div>
+    <br>
+</div>
+

@@ -1,0 +1,19 @@
+[
+    {"id": 1, "name": "Cine" },
+    {"id": 2, "name": "Sol" },
+    {"id": 3, "name": "Lluvia" },
+    {"id": 4, "name": "Discoteca" },
+    {"id": 5, "name": "Playa" },
+    {"id": 6, "name": "Deportes" },
+    {"id": 7, "name": "Soledad" },
+    {"id": 8, "name": "Amor" },
+    {"id": 9, "name": "Jazz" },
+    {"id": 10, "name": "Pop" },
+    {"id": 11, "name": "Rock and Roll" },
+    {"id": 12, "name": "Techno" },
+    {"id": 13, "name": "Reggae" },
+    {"id": 14, "name": "Salsa" },
+    {"id": 15, "name": "Hip Hop" },
+    {"id": 16, "name": "Raggaeton" },
+    {"id": 17, "name": "Rock" }
+]

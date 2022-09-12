@@ -1,0 +1,23 @@
+:root{
+    --bg:#1d201c;
+    --primary-color: #fff7c8;
+}
+
+body{
+    background: var(--bg) !important;
+    color: var(--primary-color) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.fw-600{
+    font-weight: 600 !important;
+}
+
+.w-2{
+    width:2rem;
+}
+.rotate{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}

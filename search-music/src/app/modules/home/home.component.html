@@ -1,0 +1,38 @@
+<div class="container-fluid" *ngIf="!showSong">
+    <div class="row">
+        <div class="col-md-12">
+            <img [src]="listenImg" class="img-fluid img-listen" alt="">
+        </div>
+        <div class="col-md-12">
+            <h1 class="text-center mt-5 mb-5 fw-600">
+                <span>Recomendas</span><img [src]="disk" class="w-2 rotate"alt="disk"><span>ngs</span>
+            </h1>
+            <h6 class="mb-5 text-center text-white fw-600">¡Dinos tus preferencias y te recomendaremos la mejor canción para ti!</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="content-preferences">
+                <div class="form-check" *ngFor="let item of preferences">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (change)="changeCheckbox($event, item.name)">
+                    <label class="form-check-label title-checkbox" for="flexCheckDefault">
+                        {{item.name}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <br>
+            <button class="btn btn-primary db-ma" [disabled]="loading" (click)="getSongsMetadataSegment()">
+                <strong *ngIf="!loading">
+                    Buscar canción
+                </strong>
+                <img [src]="spinner" class="img-fluid rotate" *ngIf="loading" alt="spinner">
+            </button>
+            <br>
+        </div>
+    </div>
+</div>
+
+<app-song [song]="song" (output)="outputSong($event)" *ngIf="showSong"></app-song>
